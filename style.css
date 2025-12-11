@@ -1,0 +1,314 @@
+/* -----------------------------------
+   Reset and Base
+----------------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #d0e0ff, #f0f8ff);
+  color: #0f1a2b;
+  line-height: 1.6;
+  transition: background 0.5s;
+}
+
+a {
+  text-decoration: none;
+  color: #1e3a8a;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #60a5fa;
+}
+
+/* -----------------------------------
+   Navbar
+----------------------------------- */
+.nav {
+  background: #1e3a8a;
+  padding: 18px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: background 0.3s;
+}
+
+.nav-inner {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
+
+.nav-link {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: #60a5fa;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* -----------------------------------
+   Main Cards
+----------------------------------- */
+.page {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 50px 35px;
+  margin-bottom: 50px;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+}
+
+.animate-card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -----------------------------------
+   Profile Photo — Rectangular Frame
+----------------------------------- */
+.profile-photo {
+  width: 180px;
+  height: 220px;
+  border-radius: 15px;       /* Slightly rounded corners */
+  object-fit: cover;          /* Fill the rectangle */
+  border: 5px solid #3b82f6; /* Blue border */
+  margin-bottom: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
+
+/* -----------------------------------
+   Typography
+----------------------------------- */
+h1 {
+  font-size: 2.8rem;
+  color: #1e3a8a;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: 2.2rem;
+  color: #1e40af;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #60a5fa;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+h3 {
+  font-size: 1.4rem;
+  color: #2563eb;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+.muted {
+  color: #6b7280;
+  margin-bottom: 18px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+  padding-left: 16px;
+  position: relative;
+  font-weight: 500;
+}
+
+ul li::before {
+  content: '•';
+  color: #3b82f6;
+  position: absolute;
+  left: 0;
+}
+
+/* -----------------------------------
+   Buttons
+----------------------------------- */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: 0.4s;
+  margin-top: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.btn.primary {
+  background: linear-gradient(45deg, #3b82f6, #60a5fa);
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: linear-gradient(45deg, #2563eb, #3b82f6);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* -----------------------------------
+   Footer
+----------------------------------- */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #1e3a8a;
+  color: #fff;
+  border-radius: 15px 15px 0 0;
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.2);
+}
+
+/* -----------------------------------
+   Projects and Skills Layout
+----------------------------------- */
+.skills-container {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.project {
+  margin-bottom: 30px;
+  padding: 15px;
+  border-left: 4px solid #60a5fa;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.project:hover {
+  transform: translateX(5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  border-left-color: #2563eb;
+}
+
+/* -----------------------------------
+   Animated Icons
+----------------------------------- */
+.icon, .icon-small {
+  color: #3b82f6;
+  margin-right: 10px;
+  vertical-align: middle;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.icon {
+  font-size: 1.6rem;
+}
+
+.icon-small {
+  font-size: 1rem;
+}
+
+h2:hover .icon,
+h3:hover .icon {
+  transform: rotate(15deg) scale(1.2);
+  color: #60a5fa;
+}
+
+p:hover .icon-small {
+  transform: translateX(3px) scale(1.1);
+  color: #60a5fa;
+}
+
+/* -----------------------------------
+   Skills Box Hover Effect
+----------------------------------- */
+.skills-container div:hover {
+  background: linear-gradient(145deg, #f0f8ff, #d0e0ff);
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+  transition: all 0.4s ease;
+}
+
+/* -----------------------------------
+   Animated Horizontal Line
+----------------------------------- */
+.card hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, #3b82f6, #60a5fa);
+  margin: 25px 0;
+  animation: lineGrow 1s ease forwards;
+}
+
+@keyframes lineGrow {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+/* -----------------------------------
+   Responsive
+----------------------------------- */
+@media (max-width: 900px) {
+  .skills-container {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .profile-photo {
+    width: 150px;
+    height: 200px;
+  }
+}

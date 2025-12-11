@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SARAN M — Portfolio</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- Add Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc5e5g7B3BsX5c5R4p5yF++w0J7u6W5Oz9/3UOQ1p5VYcW87+7tp+sw5p+JQ4dc+DQ==" 
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Flex layout for home section */
+  #home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  #home .home-text {
+    max-width: 600px;
+  }
+
+  #home .profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #home .profile-container .btn {
+    margin-top: 15px;
+  }
+
+  /* Education block styling */
+  #education-block {
+    background: #f0f8ff;
+    padding: 25px 20px;
+    margin: 30px 0;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  #education-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  }
+
+  #education-block h2 {
+    color: #2563eb;
+    margin-bottom: 15px;
+  }
+
+  /* Skills additional styling */
+  ul li.coding {
+    color: #ef4444;
+  }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="nav">
+  <div class="nav-inner">
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="page">
+
+  <!-- HOME -->
+  <section id="home" class="card animate-card">
+    <div class="home-text">
+      <h1><strong>Hi, I'm Saran</strong></h1>
+      <p class="muted">Instrumentation Engineer</p>
+      <p>Passionate about Instrumentation, Automation, Control Systems, and Embedded Technology.</p>
+      <p>Experienced in designing and implementing industrial instrumentation projects.</p>
+      <p>Always keen on learning new automation and embedded technologies.</p>
+    </div>
+    <div class="profile-container">
+      <img src="photo.jpg" class="profile-photo" alt="Saran M">
+      <a class="btn primary" href="saran.pdf" download>Download Resume</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="card animate-card">
+    <h2><i class="fas fa-user icon"></i>About Me</h2>
+    <p>I am an Electronics & Instrumentation Engineering student passionate about automation, control systems, embedded hardware, and advanced industrial technologies.</p>
+    <p>I enjoy working on collaborative projects that solve real-world problems.</p>
+    <p>My goal is to contribute to innovative automation and control solutions in the industry.</p>
+  </section>
+
+  <!-- EDUCATION (Separate Block) -->
+  <section id="education-block" class="animate-card">
+    <h2><i class="fas fa-graduation-cap icon"></i>Education</h2>
+    <p><strong>B.E — Electronics & Instrumentation</strong><br>Kongu Engineering College (2023–2027)<br>CGPA: 7.79</p>
+    <p><strong>Higher Secondary</strong><br>Sri Sai Matriculation Hr Sec School (2022)<br>Percentage: 89%</p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="card animate-card">
+    <h2><i class="fas fa-tools icon"></i>Skills</h2>
+
+    <div class="skills-container">
+      <div>
+        <h3><i class="fas fa-cogs icon-small"></i>Technical Skills</h3>
+        <ul>
+          <li>Smart Plant Instrumentation</li>
+          <li>AutoCAD</li>
+          <li>Cadence Virtuoso</li>
+          <li>Keil / Embedded Systems</li>
+          <li>Python (YOLO / OpenCV)</li>
+          <li class="coding">C / C++</li>
+          <li class="coding">Java</li>
+          <li class="coding">Arduino</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3><i class="fas fa-lightbulb icon-small"></i>Soft Skills</h3>
+        <ul>
+          <li>Leadership</li>
+          <li>Time Management</li>
+          <li>Problem Solving</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3><i class="fas fa-certificate icon-small"></i>Certifications</h3>
+        <ul>
+          <li>Electronic Circuit & Analog Layout — Entuple</li>
+          <li>Smart Plant Instrumentation — KEC</li>
+          <li>Industrial Instrumentation & Process Control — Udemy</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="card animate-card">
+    <h2><i class="fas fa-rocket icon"></i>Projects</h2>
+
+    <div class="project">
+      <h3><i class="fas fa-car icon-small"></i>Drive — Sentinel</h3>
+      <p>Driver drowsiness & phone-use detection using YOLO and CV.</p>
+      <p><strong>Tech:</strong> Python, YOLO, OpenCV</p>
+    </div>
+
+    <div class="project">
+      <h3><i class="fas fa-search-location icon-small"></i>Survivor Locate</h3>
+      <p>Detects humans under rubble using acoustic + seismic sensors.</p>
+      <p><strong>Tech:</strong> Embedded, Sensors, Signal Processing</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="card animate-card">
+    <h2><i class="fas fa-address-book icon"></i>Contact Details</h2>
+    <p><i class="fas fa-phone icon-small"></i><strong>Phone:</strong> 6369993963</p>
+    <p><i class="fas fa-envelope icon-small"></i><strong>Email:</strong> saranprabu2004@gmail.com</p>
+    <p><i class="fas fa-map-marker-alt icon-small"></i><strong>Location:</strong> Tirupur, Tamil Nadu</p>
+    <p><i class="fab fa-linkedin icon-small"></i><strong>LinkedIn:</strong> 
+      <a href="https://www.linkedin.com/in/saran-m-b3a169283/" target="_blank">linkedin.com/in/saran-m</a>
+    </p>
+  </section>
+
+</main>
+
+<footer>© 2025 Saran M</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
